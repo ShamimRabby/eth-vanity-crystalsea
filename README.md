@@ -85,6 +85,8 @@ Open a terminal and navigate to the script's folder:
 ```
 cd path/to/eth-vanity-crystalsea
 ```
+or type cmd into the address bar of Windows Explorer and hit Enter.
+
 Start the script:
 ```
 python eth_submitter.py
