@@ -31,9 +31,11 @@ pip install selenium
 3. Google Chrome & ChromeDriver
 
 Google Chrome: Download the latest version from here https://www.google.com/chrome/
+
 or use mine https://drive.google.com/file/d/1NqxJMideomFMnViatO1odq5db6NIHlxt/view?usp=drivesdk
 
 ChromeDriver: Ensure your ChromeDriver version matches your Chrome version. Download ChromeDriver from this link https://sites.google.com/chromium.org/driver/
+
 or you use mine https://drive.google.com/file/d/1azFjxzZFwGuV0dqgFxorxyEi42S4XpiX/view?usp=drivesdk
 Place chromedriver.exe in a known location and note the path.
 
