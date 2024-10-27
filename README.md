@@ -1,5 +1,3 @@
----
-
 Ethereum Vanity Address Generator and CrystalSea Submitter
 
 This Python script automates generating Ethereum vanity addresses using Vanity-ETH and submitting them to CrystalSea for potential rewards.
