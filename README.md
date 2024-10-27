@@ -33,6 +33,10 @@ pip install selenium
 Google Chrome: Download the latest version from here https://www.google.com/chrome/
 
 or use mine https://drive.google.com/file/d/1NqxJMideomFMnViatO1odq5db6NIHlxt/view?usp=drivesdk
+---
+Note: Must disable auto update.
+How to disable auto update?
+Simply delete (or zip backup) the 'Update' folder on C:\Program Files\Google\Update or in x64 systems: C:\Program Files (x86)\Google\Update. you may also delete/rename the GoogleUpdate.exe in that folder. If you have installed chrome in custom path, goto chrome.exe location (right-click on Google Chrome shortcut and choose Open file location), then go back (up) two folders to reach that Update folder path.
 
 ChromeDriver: Ensure your ChromeDriver version matches your Chrome version. Download ChromeDriver from this link https://sites.google.com/chromium.org/driver/
 
