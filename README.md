@@ -1,3 +1,5 @@
+---
+
 Ethereum Vanity Address Generator and CrystalSea Submitter
 
 This Python script automates generating Ethereum vanity addresses using Vanity-ETH and submitting them to CrystalSea for potential rewards.
@@ -24,9 +26,9 @@ Ensure you have Python installed.
 2. Selenium
 
 Install Selenium for browser automation by running:
-```
+
 pip install selenium
-```
+
 
 3. Google Chrome & ChromeDriver
 
@@ -151,3 +153,4 @@ This project is licensed under the MIT License.
 ---
 
 With this setup, you should be ready to automate the Ethereum address generation and submission to CrystalSea. Enjoy, and remember to customize the referral link!
+
