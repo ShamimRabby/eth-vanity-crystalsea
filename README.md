@@ -18,21 +18,21 @@ Prerequisites
 
 1. Python 3.7+
 
-Ensure you have Python installed.
+Ensure you have Python installed. link https://www.python.org/downloads/
 
 
 2. Selenium
 
 Install Selenium for browser automation by running:
-
+```
 pip install selenium
-
+```
 
 3. Google Chrome & ChromeDriver
 
-Google Chrome: Download the latest version from here.
+Google Chrome: Download the latest version from here https://www.google.com/chrome/
 
-ChromeDriver: Ensure your ChromeDriver version matches your Chrome version. Download ChromeDriver from this link. Place chromedriver.exe in a known location and note the path.
+ChromeDriver: Ensure your ChromeDriver version matches your Chrome version. Download ChromeDriver from this link https://sites.google.com/chromium.org/driver/ Place chromedriver.exe in a known location and note the path.
 
 
 
@@ -41,10 +41,10 @@ ChromeDriver: Ensure your ChromeDriver version matches your Chrome version. Down
 Installation & Setup
 
 1. Clone the Repository:
-
+```
 git clone https://github.com/your-username/eth-vanity-crystalsea.git
 cd eth-vanity-crystalsea
-
+```
 
 2. Configure ChromeDriver Path:
 
@@ -77,13 +77,13 @@ Usage
 1. Run the Script:
 
 Open a terminal and navigate to the script's folder:
-
+```
 cd path/to/eth-vanity-crystalsea
-
+```
 Start the script:
-
+```
 python eth_submitter.py
-
+```
 
 
 2. Stop the Script:
@@ -129,7 +129,11 @@ Ensure chrome_driver_path is correct and points to the location of your ChromeDr
 
 Update Selenium:
 
-Run pip install --upgrade selenium to make sure you’re using the latest version.
+Run
+```
+pip install --upgrade selenium
+```
+to make sure you’re using the latest version.
 
 
 
