@@ -42,7 +42,7 @@ Installation & Setup
 
 1. Clone the Repository:
 ```
-git clone https://github.com/your-username/eth-vanity-crystalsea.git
+git clone https://github.com/ShamimRabby/eth-vanity-crystalsea.git
 cd eth-vanity-crystalsea
 ```
 
