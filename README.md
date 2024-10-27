@@ -24,9 +24,9 @@ Ensure you have Python installed.
 2. Selenium
 
 Install Selenium for browser automation by running:
-...
+```
 pip install selenium
-...
+```
 
 3. Google Chrome & ChromeDriver
 
