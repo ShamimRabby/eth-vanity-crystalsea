@@ -43,7 +43,6 @@ cd eth-vanity-crystalsea
 Visit the Chrome WebDriver download page and download the version that matches your Chrome browser. (I have provided links to download on above.)
 
 4. Update the chrome_driver_path:
-
 Open the script and set the 'chrome_driver_path' variable to the location of your downloaded Chrome WebDriver.
 ---
 ## Usage
@@ -65,14 +64,13 @@ Option 2: Generate referrals from ETH addresses listed in ETH_Address.txt.
 
 [!WARNING] Use this script responsibly. Excessive automation may lead to IP bans or account restrictions.
 ---
-## Contributing
-
+Contributing:
 Contributions are welcome! If you have suggestions for improvements or encounter issues, please check the issues page or submit a pull request.
 ---
-## License
+License
 This project is licensed under the MIT License.
 ---
-## Acknowledgments
+Acknowledgments
 Thanks to the developers of Selenium for providing the tools necessary for web automation.
 - Special thanks to the community for their contributions and support.
 ---
