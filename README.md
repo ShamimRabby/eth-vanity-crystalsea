@@ -29,11 +29,11 @@ pip install selenium requests
 Installation
 1. Clone the repository:
 ```bash
-git clone https://github.com/yourusername/crystalsea-referral-generator.git
+git clone https://github.com/ShamimRabby/eth-vanity-crystalsea.git
 ```
 2. Navigate to the project directory:
 ```bash
-cd crystalsea-referral-generator
+cd eth-vanity-crystalsea
 ```
 3. Download and install Chrome WebDriver:
 
@@ -44,7 +44,7 @@ Open the script and set the chrome_driver_path variable to the location of your 
 Usage
 1. Run the script:
 ```bash
-python crystalsea_referral_generator.py
+python eth_submitter.py
 ```
 2. Choose an option from the menu:
 
