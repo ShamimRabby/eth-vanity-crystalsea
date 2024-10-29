@@ -44,7 +44,7 @@ Visit the Chrome WebDriver download page and download the version that matches y
 
 4. Update the chrome_driver_path:
 
-Open the script and set the "chrome_driver_path" variable to the location of your downloaded Chrome WebDriver.
+Open the script and set the 'chrome_driver_path' variable to the location of your downloaded Chrome WebDriver.
 ---
 ## Usage
 1. Run the script:
