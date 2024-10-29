@@ -1,169 +1,83 @@
-Ethereum Vanity Address Generator and CrystalSea Submitter
+```markdown
+# CrystalSea Referral Generator
 
-This Python script automates generating Ethereum vanity addresses using Vanity-ETH and submitting them to CrystalSea for potential rewards.
+## Description
 
-Features
+The **CrystalSea Referral Generator** is a Python script designed to automate the process of generating Ethereum (ETH) addresses and referral links for the CrystalSea platform. By leveraging the power of Selenium WebDriver, this script interacts with web pages to create multiple referrals efficiently. It is particularly useful for users looking to maximize their referral potential on the platform.
 
-Automated Address Generation: Uses Vanity-ETH to create Ethereum addresses in the background.
+## Features
 
-Incognito Submission Mode: Opens CrystalSea in incognito mode, ensuring separate sessions for each submission.
+- **Batch Referral Generation**: Generate up to 50 referrals from existing referral links in a single run.
+- **ETH Address Creation**: Automatically generate new Ethereum addresses using a vanity address generator.
+- **Headless Browser Support**: Operate in headless mode for faster execution without opening a browser window.
+- **Error Handling**: Built-in retry mechanisms for network requests to ensure reliability.
+- **Data Storage**: Save generated ETH addresses and referral links in a text file for future reference.
 
-Continuous Loop: The script continuously generates and submits addresses, making it easy to gather points over time.
+## Requirements
 
+To run this script, you will need:
 
+- **Python 3.x**: Ensure you have Python installed on your machine.
+- **Selenium WebDriver**: For browser automation.
+- **Chrome WebDriver**: Compatible with your version of Chrome.
+- **Requests Library**: For making HTTP requests.
 
----
+You can install the required Python packages using pip:
 
-Prerequisites
-
-1. Python 3.7+
-
-Ensure you have Python installed. link https://www.python.org/downloads/
-
-
-2. Selenium
-
-Install Selenium for browser automation by running:
+```bash
+pip install selenium requests
 ```
-pip install selenium
+Installation
+1. Clone the repository:
+```bash
+git clone https://github.com/yourusername/crystalsea-referral-generator.git
 ```
-
-3. Google Chrome & ChromeDriver
-
-Google Chrome: Download the latest version from here https://www.google.com/chrome/
-
-or use mine https://drive.google.com/file/d/1NqxJMideomFMnViatO1odq5db6NIHlxt/view?usp=drivesdk
----
-Note: Must disable auto update.
-How to disable auto update?
-Simply delete (or zip backup) the 'Update' folder on C:\Program Files\Google\Update or in x64 systems: C:\Program Files (x86)\Google\Update. you may also delete/rename the GoogleUpdate.exe in that folder. If you have installed chrome in custom path, goto chrome.exe location (right-click on Google Chrome shortcut and choose Open file location), then go back (up) two folders to reach that Update folder path.
-
-ChromeDriver: Ensure your ChromeDriver version matches your Chrome version. Download ChromeDriver from this link https://sites.google.com/chromium.org/driver/
-
-or you use mine https://drive.google.com/file/d/1azFjxzZFwGuV0dqgFxorxyEi42S4XpiX/view?usp=drivesdk
-Place chromedriver.exe in a known location and note the path.
-
-
-
----
-
-Installation & Setup
-
-1. Clone the Repository:
+2. Navigate to the project directory:
+```bash
+cd crystalsea-referral-generator
 ```
-git clone https://github.com/ShamimRabby/eth-vanity-crystalsea.git
-cd eth-vanity-crystalsea
-```
+3. Download and install Chrome WebDriver:
 
-2. Configure ChromeDriver Path:
+Visit the Chrome WebDriver download page and download the version that matches your Chrome browser.
+4. Update the chrome_driver_path:
 
-Open eth_submitter.py in a text editor.
-
-Update chrome_driver_path to the location of your ChromeDriver:
-
-chrome_driver_path = "C:\\Path\\To\\Your\\chromedriver.exe"
-
-
-
-3. Update Referral Link:
-
-Replace the referral link in eth_submitter.py with your own.
-
-Example:
-
-incognito_driver.get("https://crystalsea.org/?refer=yourReferralCode")
-
-Note: If you do not replace the referral link, any points earned will be credited to the default referral account in this script.
-
-
-
-
-
----
-
+Open the script and set the chrome_driver_path variable to the location of your downloaded Chrome WebDriver.
 Usage
-
-1. Run the Script:
-
-Open a terminal and navigate to the script's folder:
+1. Run the script:
+```bash
+python crystalsea_referral_generator.py
 ```
-cd path/to/eth-vanity-crystalsea
-```
-or type cmd into the address bar of Windows Explorer and hit Enter.
+2. Choose an option from the menu:
 
-Start the script:
-```
-python eth_submitter.py
-```
+Option 1: Generate 50 referrals per link from eth_addresses_and_refs.txt.
+Option 2: Generate referrals from ETH addresses listed in ETH_Address.txt.
 
+Configuration
+ETH_Address.txt: Create this file and list your Ethereum addresses, one per line. The script will read from this file to generate referrals.
+eth_addresses_and_refs.txt: This file will be automatically created and updated by the script, storing generated ETH addresses and their corresponding referral links.
+Important Notes
+[!CAUTION] This script interacts with web services. Ensure you comply with the terms of service of the websites you're interacting with.
 
-2. Stop the Script:
+[!WARNING] Use this script responsibly. Excessive automation may lead to IP bans or account restrictions.
 
-To stop the loop, press Ctrl + C in the terminal.
-
-
-
-
-
----
-
-Script Workflow
-
-1. Ethereum Address Generation:
-
-Opens the Vanity-ETH website in headless mode, generates an ETH address, and retrieves the address.
-
-
-
-2. Submit ETH Address to CrystalSea:
-
-Launches CrystalSea in an incognito Chrome session, submits the ETH address, and repeats the loop.
-
-
-
-3. Loop and Delay:
-
-Waits for 10 seconds (configurable) before generating and submitting the next address.
-
-
-
-
-
----
-
-Troubleshooting
-
-WebDriverException: ChromeDriver Not Found:
-
-Ensure chrome_driver_path is correct and points to the location of your ChromeDriver.
-
-
-Update Selenium:
-
-Run
-```
-pip install --upgrade selenium
-```
-to make sure you’re using the latest version.
-
-
-
-
----
-
-Disclaimer
-
-This script is provided for educational purposes. Use at your own discretion.
-
-
----
+Contributing
+Contributions are welcome! If you have suggestions for improvements or encounter issues, please check the issues page or submit a pull request.
 
 License
-
 This project is licensed under the MIT License.
 
-
+Acknowledgments
+Thanks to the developers of Selenium for providing the tools necessary for web automation.
+Special thanks to the community for their contributions and support.
 ---
+### Key Enhancements:
+- **Detailed Description**: Expanded the project description to clarify its purpose and functionality.
+- **Features Section**: Added more specific features to highlight the capabilities of the script.
+- **Installation Instructions**: Provided clearer steps for installation and setup.
+- **Usage Instructions**: Clarified how to run the script and what options are available.
+- **Configuration Details**: Explained the purpose of the configuration files.
+- **Acknowledgments and Contact Information**: Added sections to recognize contributions and provide a way for users to reach out.
 
-With this setup, you should be ready to automate the Ethereum address generation and submission to CrystalSea. Enjoy, and remember to customize the referral link!
-
+Feel free to modify any sections to better fit your project's specifics!
+---
+For any questions or support, please open an issue or contact the maintainer directly. Happy coding!
