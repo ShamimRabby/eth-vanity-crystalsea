@@ -88,6 +88,33 @@ This option uses ETH addresses from ETH_Address.txt to generate referrals. If ET
 - ETH_Address.txt: Create this file and list your Ethereum addresses, one per line. The script will read from this file to generate referrals.
 - eth_addresses_and_refs.txt: This file will be automatically created and updated by the script, storing generated ETH addresses and their corresponding referral links.
 ---
+Script Details
+
+Key Functions
+- setup_driver: Configures ChromeDriver with headless and incognito options.
+
+- check_url_availability: Checks URL connectivity with retry attempts.
+
+- generate_eth_vanity_address: Generates a new ETH address.
+
+- submit_eth_to_crystalsea: Submits ETH addresses to CrystalSea with a given referral link.
+
+- save_eth_and_refer: Saves generated ETH address and referral link to eth_addresses_and_refs.txt.
+
+Graceful Exit:
+To stop the script at any time, press Ctrl+C. This will exit the script smoothly and display the message:
+
+(Process interrupted by user. Exiting gracefully.)
+
+---
+Notes and Troubleshooting
+
+- Headless Mode: The script runs in headless mode by default. To observe actions visually, set headless=False in setup_driver.
+
+- Referral Link Format: Make sure referral links are correctly formatted in eth_addresses_and_refs.txt as https://crystalsea.org/?refer=<code>.
+
+- SSL and Network Issues: If network issues arise, retry the connection or use the check_url_availability function.
+---
 ## Important Notes
 [!CAUTION] This script interacts with web services. Ensure you comply with the terms of service of the websites you're interacting with.
 
