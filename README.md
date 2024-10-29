@@ -41,6 +41,7 @@ cd eth-vanity-crystalsea
 3. Download and install Chrome WebDriver:
 
 Visit the Chrome WebDriver download page and download the version that matches your Chrome browser. (I have provided links to download on above.)
+
 4. Update the chrome_driver_path:
 
 Open the script and set the "chrome_driver_path" variable to the location of your downloaded Chrome WebDriver.
