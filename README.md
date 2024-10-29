@@ -88,7 +88,7 @@ This option uses ETH addresses from ETH_Address.txt to generate referrals. If ET
 - ETH_Address.txt: Create this file and list your Ethereum addresses, one per line. The script will read from this file to generate referrals.
 - eth_addresses_and_refs.txt: This file will be automatically created and updated by the script, storing generated ETH addresses and their corresponding referral links.
 ---
-Script Details
+## Script Details
 
 Key Functions
 - setup_driver: Configures ChromeDriver with headless and incognito options.
@@ -101,13 +101,13 @@ Key Functions
 
 - save_eth_and_refer: Saves generated ETH address and referral link to eth_addresses_and_refs.txt.
 
-Graceful Exit:
+- Graceful Exit:
 To stop the script at any time, press Ctrl+C. This will exit the script smoothly and display the message:
 
 (Process interrupted by user. Exiting gracefully.)
 
 ---
-Notes and Troubleshooting
+## Notes and Troubleshooting
 
 - Headless Mode: The script runs in headless mode by default. To observe actions visually, set headless=False in setup_driver.
 
