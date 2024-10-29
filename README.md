@@ -119,16 +119,18 @@ To stop the script at any time, press Ctrl+C. This will exit the script smoothly
 [!CAUTION] This script interacts with web services. Ensure you comply with the terms of service of the websites you're interacting with.
 
 [!WARNING] Use this script responsibly. Excessive automation may lead to IP bans or account restrictions.
----
-Contributing:
-Contributions are welcome! If you have suggestions for improvements or encounter issues, please check the issues page or submit a pull request.
----
-License:
 
-This project is licensed under the MIT License.
 ---
-Acknowledgments:
-Thanks to the developers of Selenium for providing the tools necessary for web automation.
+## Contributing:
+Contributions are welcome! If you have suggestions for improvements or encounter issues, please check the issues page or submit a pull request.
+
+---
+## License:
+This project is licensed under the MIT License.
+
+---
+## Acknowledgments:
+Thanks to the developers of Selenium for providing the tools necessary for web automation. 
 - Special thanks to the community for their contributions and support.
 ---
 ### Key Enhancements:
