@@ -111,7 +111,7 @@ To stop the script at any time, press Ctrl+C. This will exit the script smoothly
 
 - Headless Mode: The script runs in headless mode by default. To observe actions visually, set headless=False in setup_driver.
 
-- Referral Link Format: Make sure referral links are correctly formatted in eth_addresses_and_refs.txt as https://crystalsea.org/?refer=<code>.
+- Referral Link Format: Make sure referral links are correctly formatted in eth_addresses_and_refs.txt as https://crystalsea.org/?refer=code.
 
 - SSL and Network Issues: If network issues arise, retry the connection or use the check_url_availability function.
 ---
