@@ -17,7 +17,6 @@ The **CrystalSea Referral Generator** is a Python script designed to automate th
 To run this script, you will need:
 
 - **Python 3.x**: Ensure you have Python installed on your machine. Download from here: https://www.python.org/downloads/
-- **Selenium WebDriver**: For browser automation.
 - **Chrome WebDriver**: Compatible with your version of Chrome. Download from here: https://sites.google.com/chromium.org/driver/downloads?authuser=0
 or you can use mine which I'm using.
 Chrome: https://drive.google.com/file/d/1NqxJMideomFMnViatO1odq5db6NIHlxt/view?usp=drivesdk
