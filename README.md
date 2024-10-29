@@ -17,7 +17,7 @@ The **CrystalSea Referral Generator** is a Python script designed to automate th
 To run this script, you will need:
 
 - **Python 3.x**: Ensure you have Python installed on your machine. Download from here: https://www.python.org/downloads/
-- **Chrome WebDriver**: Compatible with your version of Chrome. Download from here: https://sites.google.com/chromium.org/driver/downloads?authuser=0
+- **Chrome Driver**: Compatible with your version of Chrome. Download from here: https://sites.google.com/chromium.org/driver/downloads?authuser=0
 or you can use mine which I'm using.
 Chrome: https://drive.google.com/file/d/1NqxJMideomFMnViatO1odq5db6NIHlxt/view?usp=drivesdk
 Chrome Driver: https://drive.google.com/file/d/1azFjxzZFwGuV0dqgFxorxyEi42S4XpiX/view?usp=drivesdk
@@ -30,27 +30,36 @@ pip install selenium requests
 ```
 ---
 ## Installation
-1. Clone the repository:
+1. ChromeDriver Setup
+
+2. Download ChromeDriver, matching your Chrome browser version. (I hve provided link to download on above)
+
+3. Place ChromeDriver in the same directory as the script or specify the path in the code.
+
+4. Clone the repository:
 ```
 git clone https://github.com/ShamimRabby/eth-vanity-crystalsea.git
 ```
-2. Navigate to the project directory:
+
+File Preparation
+
+1. Referral Links: Create a file eth_addresses_and_refs.txt with referral links in the format:
+
+ETH Address: <address> | Referral Link: https://crystalsea.org/?refer=<code>
+
+2. ETH Addresses: If you plan to use existing addresses, add them to ETH_Address.txt.
+
+---
+## Usage
+1. Navigate to the project directory:
 ```
 cd eth-vanity-crystalsea
 ```
-3. Download and install Chrome WebDriver:
-
-Visit the Chrome WebDriver download page and download the version that matches your Chrome browser. (I have provided links to download on above.)
-
-4. Update the chrome_driver_path:
-Open the script and set the 'chrome_driver_path' variable to the location of your downloaded Chrome WebDriver.
----
-## Usage
-1. Run the script:
+2. Run the script:
 ```
 python eth_submitter.py
 ```
-2. Choose an option from the menu:
+3. Choose an option from the menu:
 
 Option 1: Generate 50 referrals per link from eth_addresses_and_refs.txt.
 Option 2: Generate referrals from ETH addresses listed in ETH_Address.txt.
