@@ -1,4 +1,3 @@
-```markdown
 # CrystalSea Referral Generator
 
 ## Description
@@ -24,7 +23,7 @@ To run this script, you will need:
 
 You can install the required Python packages using pip:
 
-```bash
+```
 pip install selenium requests
 ```
 Installation
