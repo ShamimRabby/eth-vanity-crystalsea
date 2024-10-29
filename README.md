@@ -56,14 +56,33 @@ ETH Address: <address> | Referral Link: https://crystalsea.org/?refer=<code>
 ```
 cd eth-vanity-crystalsea
 ```
-2. Run the script:
+2. Run the script from your terminal. Choose the desired option when prompted:
 ```
 python eth_submitter.py
 ```
-3. Choose an option from the menu:
+Option 1: Generate 50 Referrals per Referral Link
 
-Option 1: Generate 50 referrals per link from eth_addresses_and_refs.txt.
-Option 2: Generate referrals from ETH addresses listed in ETH_Address.txt.
+This option generates 50 ETH addresses per referral link found in eth_addresses_and_refs.txt.
+
+- Example workflow:
+
+1. The script reads referral links from eth_addresses_and_refs.txt.
+
+2. For each link, it generates 50 ETH addresses and submits them to the specified link.
+
+3. Progress messages display every 50 referrals generated.
+
+Option 2: Generate Referral from ETH Address File
+
+This option uses ETH addresses from ETH_Address.txt to generate referrals. If ETH_Address.txt is empty or not found, a warning will appear.
+
+- Example workflow:
+
+1. The script reads addresses from ETH_Address.txt.
+
+2. Each ETH address is submitted to CrystalSea to generate a referral link.
+
+3. Generated referral links and ETH addresses are saved in eth_addresses_and_refs.txt.
 
 ## Configuration
 - ETH_Address.txt: Create this file and list your Ethereum addresses, one per line. The script will read from this file to generate referrals.
