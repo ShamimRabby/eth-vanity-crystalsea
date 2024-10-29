@@ -67,10 +67,11 @@ Option 2: Generate referrals from ETH addresses listed in ETH_Address.txt.
 Contributing:
 Contributions are welcome! If you have suggestions for improvements or encounter issues, please check the issues page or submit a pull request.
 ---
-License
+License:
+
 This project is licensed under the MIT License.
 ---
-Acknowledgments
+Acknowledgments:
 Thanks to the developers of Selenium for providing the tools necessary for web automation.
 - Special thanks to the community for their contributions and support.
 ---
