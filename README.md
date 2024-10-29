@@ -28,24 +28,26 @@ You can install the required Python packages using pip:
 ```
 pip install selenium requests
 ```
-Installation
+---
+## Installation
 1. Clone the repository:
-```bash
+```
 git clone https://github.com/ShamimRabby/eth-vanity-crystalsea.git
 ```
 2. Navigate to the project directory:
-```bash
+```
 cd eth-vanity-crystalsea
 ```
 3. Download and install Chrome WebDriver:
 
-Visit the Chrome WebDriver download page and download the version that matches your Chrome browser.
+Visit the Chrome WebDriver download page and download the version that matches your Chrome browser. (I have provided links to download on above.)
 4. Update the chrome_driver_path:
 
-Open the script and set the chrome_driver_path variable to the location of your downloaded Chrome WebDriver.
-Usage
+Open the script and set the "chrome_driver_path" variable to the location of your downloaded Chrome WebDriver.
+---
+## Usage
 1. Run the script:
-```bash
+```
 python eth_submitter.py
 ```
 2. Choose an option from the menu:
@@ -53,23 +55,24 @@ python eth_submitter.py
 Option 1: Generate 50 referrals per link from eth_addresses_and_refs.txt.
 Option 2: Generate referrals from ETH addresses listed in ETH_Address.txt.
 
-Configuration
-ETH_Address.txt: Create this file and list your Ethereum addresses, one per line. The script will read from this file to generate referrals.
-eth_addresses_and_refs.txt: This file will be automatically created and updated by the script, storing generated ETH addresses and their corresponding referral links.
-Important Notes
+## Configuration
+- ETH_Address.txt: Create this file and list your Ethereum addresses, one per line. The script will read from this file to generate referrals.
+- eth_addresses_and_refs.txt: This file will be automatically created and updated by the script, storing generated ETH addresses and their corresponding referral links.
+---
+## Important Notes
 [!CAUTION] This script interacts with web services. Ensure you comply with the terms of service of the websites you're interacting with.
 
 [!WARNING] Use this script responsibly. Excessive automation may lead to IP bans or account restrictions.
-
-Contributing
+---
+## Contributing
 Contributions are welcome! If you have suggestions for improvements or encounter issues, please check the issues page or submit a pull request.
-
-License
+---
+## License
 This project is licensed under the MIT License.
-
-Acknowledgments
+---
+## Acknowledgments
 Thanks to the developers of Selenium for providing the tools necessary for web automation.
-Special thanks to the community for their contributions and support.
+- Special thanks to the community for their contributions and support.
 ---
 ### Key Enhancements:
 - **Detailed Description**: Expanded the project description to clarify its purpose and functionality.
