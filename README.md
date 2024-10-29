@@ -45,7 +45,7 @@ File Preparation
 
 1. Referral Links: Create a file eth_addresses_and_refs.txt with referral links in the format:
 
-ETH Address: <address> | Referral Link: https://crystalsea.org/?refer=<code>
+'ETH Address: <address> | Referral Link: https://crystalsea.org/?refer=<code>'
 
 2. ETH Addresses: If you plan to use existing addresses, add them to ETH_Address.txt.
 
