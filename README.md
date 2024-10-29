@@ -66,6 +66,7 @@ Option 2: Generate referrals from ETH addresses listed in ETH_Address.txt.
 [!WARNING] Use this script responsibly. Excessive automation may lead to IP bans or account restrictions.
 ---
 ## Contributing
+
 Contributions are welcome! If you have suggestions for improvements or encounter issues, please check the issues page or submit a pull request.
 ---
 ## License
