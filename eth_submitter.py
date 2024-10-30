@@ -6,7 +6,6 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 import time
-import random
 import os
 
 chrome_driver_path = "C:\\Users\\Test\\Desktop\\Red_Packet\\chromedriver-win64\\chromedriver.exe"
@@ -49,9 +48,9 @@ def generate_eth_vanity_address(driver):
     print(f"Generated ETH Address: {eth_address}")
     return eth_address
 
-def submit_eth_to_crystalsea(eth_address, refer_link, save_refer=True):
+def submit_eth_to_crystalsea(eth_address, refer_link, save_refer=True, driver=None):
     print(f"Submitting ETH Address to CrystalSea with refer link {refer_link}...")
-    incognito_driver = setup_driver(headless=True, incognito=True)
+    incognito_driver = setup_driver(headless=True, incognito=True) if driver is None else driver
     try:
         if check_url_availability(refer_link):
             incognito_driver.get(refer_link)
@@ -80,22 +79,35 @@ def submit_eth_to_crystalsea(eth_address, refer_link, save_refer=True):
             save_eth_and_refer(eth_address, refer_generated)
         
     finally:
-        incognito_driver.quit()
+        if driver is None:
+            incognito_driver.quit()
 
 def save_eth_and_refer(eth_address, refer_generated):
     with open("eth_addresses_and_refs.txt", "a") as file:
         file.write(f"ETH Address: {eth_address} | Referral Link: {refer_generated}\n")
     print(f"Saved: ETH Address: {eth_address} | Referral Link: {refer_generated}")
 
+def check_referral_count(driver):
+    driver.refresh()
+    referral_count = WebDriverWait(driver, 10).until(
+        EC.visibility_of_element_located((By.CSS_SELECTOR, "#airdrop-block > div.row.mt-4.text-center.justify-content-between > div:nth-child(2) > div.heading-h5.text-primary"))
+    ).text
+    return int(referral_count)
+
 def main():
     try:
         while True:
-            print("\nChoose an option:")
-            print("1) Generate 50 Referrals per link from eth_addresses_and_refs.txt")
-            print("2) Generate Referral from ETH Address File and save ETH and refer link")
+            try:
+                print("\nChoose an option:")
+                print("1) Generate 50 Referrals per link from eth_addresses_and_refs.txt")
+                print("2) Generate Referral from ETH Address File and save ETH and refer link")
+                
+                choice = input("Enter your choice (1 or 2): ")
             
-            choice = input("Enter your choice (1 or 2): ")
-            
+            except KeyboardInterrupt:
+                print("\nProcess interrupted by user during option selection. Exiting gracefully.")
+                break  # Exit the main loop
+
             if choice == "1":
                 try:
                     with open("eth_addresses_and_refs.txt", "r") as file:
@@ -106,35 +118,53 @@ def main():
                         continue
 
                     vanity_eth_driver = setup_driver(headless=True)
+                    crystalsea_driver = setup_driver(headless=True, incognito=True)
 
                     for refer_link in referral_links:
                         print(f"\nProcessing referral link: {refer_link}")
-                        for i in range(50):
+                        for i in range(1, 51):
                             eth_vanity_address = generate_eth_vanity_address(vanity_eth_driver)
-                            submit_eth_to_crystalsea(eth_vanity_address, refer_link, save_refer=False)
+                            submit_eth_to_crystalsea(eth_vanity_address, refer_link, save_refer=False, driver=crystalsea_driver)
                             time.sleep(1)
-                        print("50 referrals generated, proceeding to the next refer link.")
-                    
+                            if i % 5 == 0:
+                                referrals_done = check_referral_count(crystalsea_driver)
+                                print(f"Referrals completed: {referrals_done}")
+                                if referrals_done >= 50:
+                                    print("50 referrals generated.")
+                                    break
+                        else:
+                            continue
+                        break
+                
                 except FileNotFoundError:
                     print("eth_addresses_and_refs.txt file not found.")
                 
                 finally:
                     vanity_eth_driver.quit()
+                    crystalsea_driver.quit()
             
             elif choice == "2":
                 if not os.path.exists("ETH_Address.txt") or os.path.getsize("ETH_Address.txt") == 0:
                     print("No ETH address found in ETH_Address.txt.")
                     continue
                 
+                referral_link = input("Please enter your CrystalSea referral link (e.g., https://crystalsea.org/?refer=your-code): ").strip()
+                
                 try:
                     with open("ETH_Address.txt", "r") as file:
                         eth_addresses = file.readlines()
                     
+                    address_count = len(eth_addresses)
+                    if address_count == 50:
+                        print("Found 50 ETH Addresses.")
+                    else:
+                        print(f"Found {address_count} ETH Addresses.")
+
                     for eth_address in eth_addresses:
                         eth_address = eth_address.strip()
                         if eth_address:
                             print(f"Using ETH Address from file: {eth_address}")
-                            submit_eth_to_crystalsea(eth_address, "https://crystalsea.org/?refer=5c5c99", save_refer=True)
+                            submit_eth_to_crystalsea(eth_address, referral_link, save_refer=True)
                             time.sleep(1)
                 
                 except FileNotFoundError:
